@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.3.16)  23 MAR 2021 15:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.3.16)  24 MAR 2021 12:05
 entering extended mode
 **"./At Debts Door Document.tex"
 (At Debts Door Document.tex
@@ -204,24 +204,24 @@ File: l3backend-pdftex.def 2021-03-02 L3 backend support: PDF output (pdfTeX)
 (At Debts Door Document.aux)
 \openout1 = `"At Debts Door Document.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -257,7 +257,7 @@ LaTeX Font Info:    ... okay on input line 38.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 38.
+Package hyperref Info: Link coloring OFF on input line 34.
 (D:\MikTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -269,48 +269,53 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count267
 )
-LaTeX Info: Redefining \ref on input line 38.
-LaTeX Info: Redefining \pageref on input line 38.
-LaTeX Info: Redefining \nameref on input line 38.
+LaTeX Info: Redefining \ref on input line 34.
+LaTeX Info: Redefining \pageref on input line 34.
+LaTeX Info: Redefining \nameref on input line 34.
 
 (At Debts Door Document.out) (At Debts Door Document.out)
 \@outlinefile=\write3
 \openout3 = `"At Debts Door Document.out"'.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 41.
+(Font)              <12> on input line 37.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 41.
+(Font)              <8> on input line 37.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 41.
+(Font)              <6> on input line 37.
 
-Overfull \hbox (27.41847pt too wide) in paragraph at lines 56--56
-|[]\OT1/cmr/bx/n/20.74 GAME EL-E-MENTS: CHAR-AC-TERS, ITEMS,
+Overfull \hbox (21.58775pt too wide) in paragraph at lines 90--90
+|[]\OT1/cmss/bx/n/20.74 GAME EL-E-MENTS: CHAR-AC-TERS, ITEMS, OB-
  []
 
 [1
 
-{C:/Users/Eddie/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
+{C:/Users/Eddie/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] [2]
 (At Debts Door Document.aux)
-Package rerunfilecheck Info: File `"At Debts Door Document".out' has not change
-d.
-(rerunfilecheck)             Checksum: 339C3FA79934931ECA7FA0DDCACCC6CC;1779.
+
+Package rerunfilecheck Warning: File `"At Debts Door Document".out' has changed
+.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `"At Debts Door Document".out':
+(rerunfilecheck)             Before: F9BE83B0427EA1DEEDC9FED42F567266;3819
+(rerunfilecheck)             After:  B2E7F3BFF6D43F8E375D7D8DAB578A55;3794.
  ) 
 Here is how much of TeX's memory you used:
- 7791 strings out of 479334
- 113933 string characters out of 2873604
- 420143 words of memory out of 3000000
- 25173 multiletter control sequences out of 15000+200000
- 407080 words of font info for 39 fonts, out of 3000000 for 9000
+ 7828 strings out of 479334
+ 114462 string characters out of 2873604
+ 422731 words of memory out of 3000000
+ 25198 multiletter control sequences out of 15000+200000
+ 407672 words of font info for 41 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,6n,74p,389b,319s stack positions out of 5000i,500n,10000p,200000b,50000s
-<D:/MikTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/MikTeX/fonts/type1/p
-ublic/amsfonts/cm/cmbx12.pfb><D:/MikTeX/fonts/type1/public/amsfonts/cm/cmr10.pf
-b><D:/MikTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/MikTeX/fonts/type1/pu
-blic/amsfonts/cm/cmr17.pfb>
-Output written on "At Debts Door Document.pdf" (1 page, 64250 bytes).
+ 71i,6n,74p,422b,320s stack positions out of 5000i,500n,10000p,200000b,50000s
+<D:/MikTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><D:/MikTeX/fonts/type1/p
+ublic/amsfonts/cm/cmss12.pfb><D:/MikTeX/fonts/type1/public/amsfonts/cm/cmss17.p
+fb><D:/MikTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb>
+Output written on "At Debts Door Document.pdf" (2 pages, 56847 bytes).
 PDF statistics:
- 79 PDF objects out of 1000 (max. 8388607)
- 13 named destinations out of 1000 (max. 500000)
- 89 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 130 PDF objects out of 1000 (max. 8388607)
+ 24 named destinations out of 1000 (max. 500000)
+ 169 words of extra memory for PDF output out of 10000 (max. 10000000)
 
