@@ -34,62 +34,74 @@
 \begin{document}
 
 \maketitle
-
+\setcounter{section}{-1}
 \section{TABLE OF CONTENTS}
 
 %
 
-\subsection{INTRODUCTION/OVERVIEW \ref{intro}}
+\subsection{INTRODUCTION/OVERVIEW [\ref{intro}]}
 
-\subsubsection{STORY SUMMARISED \ref{storysumm}}
+\subsubsection{STORY SUMMARISED [\ref{storysumm}]}
 
-\subsubsection{FEATURES THAT MAKE THE GAME COMPELLING AND UNIQUE \ref{features}}
-
-%
-
-\subsection{GAME MECHANICS \ref{mechanics}}
+\subsubsection{FEATURES THAT MAKE THE GAME COMPELLING AND UNIQUE [\ref{features}]}
 
 %
 
-\subsection{GAME MECHANICS - SUMMARY \ref{mechanicssumm}}
+\subsection{GAME MECHANICS [\ref{mechanics}]}
 
 %
 
-\subsection{GAME AI \ref{ai}}
+\subsection{GAME MECHANICS - SUMMARY [\ref{mechanicssumm}]}
 
 %
 
-\subsection{GAME ELEMENTS: CHARACTERS, ITEMS, OBJECTS/MECHANISMS \ref{elements}}
+\subsection{GAME AI [\ref{ai}]}
+
+\subsubsection{PASSIVE AI [\ref{passAI}]}
+
+\subsubsection{AGGRESSIVE AI [\ref{aggAI}]}
+
+\subsection{GAME ELEMENTS: CHARACTERS, ITEMS, OBJECTS/MECHANISMS [\ref{elements}]}
 
 %
 
-\subsection{STORY OVERVIEW \ref{storyover}}
+\subsection{STORY OVERVIEW [\ref{storyover}]}
 
 %
 
-\subsection{GAME PROGRESSION \ref{progression}}
+\subsection{GAME PROGRESSION [\ref{progression}]}
 
 %
 
-\subsection{SYSTEM MENUS \ref{menus}}
+\subsection{SYSTEM MENUS [\ref{menus}]}
 
 %Main section
 
 \section{INTRODUCTION/OVERVIEW \label{intro}}
-At Debt’s Door(or A.D.D) is a fast paced shooter/strategy game. The goal of the game is to sneak in and infiltrate various locations such as banks, jewellery stores etc., and loot as much as you can without getting caught by the police that oppose you. This takes place from a top-down perspective where the camera follows the player as he carries out these heists. Many beneficial tools and weapons can be acquired and earned throughout the game to help ease the players pursuits.
+At Debt’s Door(or A.D.D.) is a fast paced shooter/strategy game. The goal of the game is to sneak in and infiltrate various locations such as banks, jewellery stores etc., and loot as much as you can without getting caught by the police that oppose you. This takes place from a top-down perspective where the camera follows the player as he carries out these heists. Many beneficial tools and weapons can be acquired and earned throughout the game to help ease the players pursuits.
 \bigbreak
 While stealth is the opportune approach, it is not necessary. If he/she desires it, the player can choose brutal offensive assault instead. Weapons such as pistols and shotguns along with body armour help you carry out this risky task.
 
 \subsection{STORY SUMMARISED \label{storysumm}}
-A.D.D is set in modern America, where money rules and you, “The Player” live your life desperately trying to gather it. After some poor choices and even worse gambles, you find yourself in debt to the infamous Starman, America’s most renowned mob boss. Left with a limited time frame, “The Player” has no choice but to resort to a life of crime.
+A.D.D. is set in modern America, where money rules and you, “The Player” live your life desperately trying to gather it. After some poor choices and even worse gambles, you find yourself in debt to the infamous Starman, America’s most renowned mob boss. Left with a limited time frame, “The Player” has no choice but to resort to a life of crime.
 
 \subsection{FEATURES THAT MAKE THE GAME COMPELLING AND UNIQUE \label{features}}
+One of the core themes of the game is money so naturally, a lot of the game's features will revolve around money and how it can be used. Money is the thing that motivates the player through Starman's threats but players will find it difficult to collect the amount owed without spending a bit of it on useful items. This creates an interesting conflict in the player's mind. Should they play it safe and leave themselves vulnerable to attacks or should they invest some of it in equipment to better defend themselves? Players should keep in mind that they should think ahead when buying weapons as they have durability and will be destroyed if they're used too many times. As you gather more money in a stage, you will get slowed down by the weight. If you don't want to get slowed down, you might have to throw some of it away to flee from a dangerous situation which adds another layer of strategy. 
 
 \section{GAME MECHANICS \label{mechanics}}
+Can move around in a 2D space. Can't run but can roll to gain extra speed. When approaching an item/person that can be interacted with, an icon will pop up, signifying that they are interactive. Can steal from people and objects such as safes. Can kill people and destroy certain objects such as security cameras. Can use melee and ranged weapons, both with their own benefits and flaws. Can cycle through weapons. Durability encourages the player to be strategic when using weapons. Shop available to buy items from and there is a load-out screen where players can equip what weapons they want. There is a map selection screen where players can choose where to go. There are collectibles in some stages that gravitate towards the player once they're close enough to it. You slow down as you gather more money but you can throw some away. Every time you exit a stage, a day passes 
 
 \section{GAME MECHANICS - SUMMARY \label{mechanicssumm}}
+In summary, A.D.D. exhibits many features found in other top-down 2D shooters but incorporates some that are unique to itself.
 
 \section{GAME AI \label{ai}}
+All of the AI in A.D.D. can be broken down into 2 different types: Passive AI and aggressive AI.
+
+\subsection{PASSIVE AI \label{passAI}}
+When the player is being a model citizen and not causing trouble such as attacking or stealing, passive NPCs will randomly switch between their "IDLE" and "WANDER" states. Using a timer with intervals of several seconds, every timer counts down to zero, one of the two states will be chosen and the timer will be reset. However, if the player is in the NPC's area of detection while committing crime, their state will flip to "PANIC", which will alert the stage that the player has been detected, which will consequently spawn in enemy cops.
+
+\subsection{AGGRESSIVE AI \label{aggAI}}
+Once the world has been alerted of the player's crimes, enemies will spawn and target the player. They also have an area of detection and if the player is within this area, they will be chased down mercilessly. If they get close enough to the player, they will start attacking with whatever weapon is in their possession. If the player manages to escape from their area of detection, the cops' states will also flip between "IDLE" and "WANDER", looking for the player.
 
 \section{GAME ELEMENTS: CHARACTERS, ITEMS, OBJECTS/MECHANISMS \label{elements}}
 
@@ -114,5 +126,11 @@ All of these are purchased with the money and collectibles stolen from the heist
 These items and weapons make gameplay more varied as the number of approach and routes to take multiply exponentially. “The Player” must carefully balance buying upgrades to help him earn more money with the task of saving his money in order to pay back Starman.
 
 \section{SYSTEM MENUS \label{menus}}
-
+While designing the various system menus in A.D.D., we don't want to distract the player with copious amounts of unnecessary menus, which is why we made every menu as snappy and quick as possible.
+\bigbreak
+In the main menu, buttons for "START", "TUTORIAL", "CREDITS" and "EXIT" are present against a cinematic illustration.
+\bigbreak
+There is a loadout menu in which you can equip/unequip your weapons. A 4 x 4 grid inventory is shown on the right with the player's avatar standing on the left. The "BACK" button is placed below the player and when it's pressed, it will send you back to the main game. The inventory shows every weapon that you have in your arsenal and currently equipped weapons will be visually marked with a border. To equip/unequip an item, players simply click on them.
+\bigbreak
+In the map selection screen, players will see icons of various stages that are available to them. By hovering over each icon, text will show up at the bottom of the screen, giving info about the stage such as how much loot is potentially available and potentially how dangerous it might be.
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.3.16)  29 MAR 2021 12:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.3.16)  29 MAR 2021 18:44
 entering extended mode
 **"./At Debts Door Document.tex"
 (At Debts Door Document.tex
@@ -283,36 +283,32 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 37.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 37.
+ [1
 
-Overfull \hbox (21.58775pt too wide) in paragraph at lines 94--94
+{C:/Users/Eddie/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] [2]
+Overfull \hbox (21.58775pt too wide) in paragraph at lines 106--106
 |[]\OT1/cmss/bx/n/20.74 GAME EL-E-MENTS: CHAR-AC-TERS, ITEMS, OB-
  []
 
-[1
-
-{C:/Users/Eddie/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] [2] [3]
-(At Debts Door Document.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+[3] [4] (At Debts Door Document.aux)
 Package rerunfilecheck Info: File `"At Debts Door Document".out' has not change
 d.
-(rerunfilecheck)             Checksum: B2E7F3BFF6D43F8E375D7D8DAB578A55;3794.
+(rerunfilecheck)             Checksum: AF16AE387DD1479AA4F224B94C57E709;4470.
  ) 
 Here is how much of TeX's memory you used:
- 7829 strings out of 479334
- 114468 string characters out of 2873604
- 425731 words of memory out of 3000000
- 25198 multiletter control sequences out of 15000+200000
+ 7840 strings out of 479334
+ 114629 string characters out of 2873604
+ 425839 words of memory out of 3000000
+ 25204 multiletter control sequences out of 15000+200000
  407672 words of font info for 41 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,6n,74p,535b,321s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 71i,6n,74p,935b,322s stack positions out of 5000i,500n,10000p,200000b,50000s
 <D:/MikTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><D:/MikTeX/fonts/type1/p
 ublic/amsfonts/cm/cmss12.pfb><D:/MikTeX/fonts/type1/public/amsfonts/cm/cmss17.p
 fb><D:/MikTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb>
-Output written on "At Debts Door Document.pdf" (3 pages, 66898 bytes).
+Output written on "At Debts Door Document.pdf" (4 pages, 74859 bytes).
 PDF statistics:
- 135 PDF objects out of 1000 (max. 8388607)
- 25 named destinations out of 1000 (max. 500000)
- 169 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 157 PDF objects out of 1000 (max. 8388607)
+ 30 named destinations out of 1000 (max. 500000)
+ 201 words of extra memory for PDF output out of 10000 (max. 10000000)
 
