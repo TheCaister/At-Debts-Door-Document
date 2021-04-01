@@ -4,6 +4,7 @@
 \usepackage{titling}
 \usepackage[margin=1.25in]{geometry}
 \usepackage{hyperref}
+\usepackage{tabto}
 
 \titleformat{\section}
 {\bfseries\huge}
@@ -89,7 +90,34 @@ A.D.D. is set in modern America, where money rules and you, “The Player” liv
 One of the core themes of the game is money so naturally, a lot of the game's features will revolve around money and how it can be used. Money is the thing that motivates the player through Starman's threats but players will find it difficult to collect the amount owed without spending a bit of it on useful items. This creates an interesting conflict in the player's mind. Should they play it safe and leave themselves vulnerable to attacks or should they invest some of it in equipment to better defend themselves? Players should keep in mind that they should think ahead when buying weapons as they have durability and will be destroyed if they're used too many times. As you gather more money in a stage, you will get slowed down by the weight. If you don't want to get slowed down, you might have to throw some of it away to flee from a dangerous situation which adds another layer of strategy. 
 
 \section{GAME MECHANICS \label{mechanics}}
-Can move around in a 2D space. Can't run but can roll to gain extra speed. When approaching an item/person that can be interacted with, an icon will pop up, signifying that they are interactive. Can steal from people and objects such as safes. Can kill people and destroy certain objects such as security cameras. Can use melee and ranged weapons, both with their own benefits and flaws. Can cycle through weapons. Durability encourages the player to be strategic when using weapons. Shop available to buy items from and there is a load-out screen where players can equip what weapons they want. There is a map selection screen where players can choose where to go. There are collectibles in some stages that gravitate towards the player once they're close enough to it. You slow down as you gather more money but you can throw some away. Every time you exit a stage, a day passes 
+Can move around in a 2D space. Can't run but can roll to gain extra speed.
+\bigbreak
+\begin{tabbing}
+\#When you roll, your speed is increased\\
+fun\= c roll\_state():\\
+\>	velocity = roll\_vector * ROLL\_SPEED\\
+\>	animationState.travel("Roll")\\
+\>	move()\\
+\end{tabbing}
+\bigbreak
+When approaching an item/person that can be interacted with, an icon will pop up, signifying that they are interactive. Can steal from people and objects such as safes. Can kill people and destroy certain objects such as security cameras. Can use melee and ranged weapons, both with their own benefits and flaws. Can cycle through weapons. Durability encourages the player to be strategic when using weapons. Shop available to buy items from and there is a load-out screen where players can equip what weapons they want. There is a map selection screen where players can choose where to go. There are collectibles in some stages that gravitate towards the player once they're close enough to it. You slow down as you gather more money but you can throw some away. 
+\bigbreak
+\begin{tabbing}
+\#Acc\=elerates towards player once he enters the playerDetection area\\
+func \_physics\_process(delta):\\
+\> for  b\= ody in playerDetection.get\_overlapping\_bodies():\\
+\> \> if bo\=dy.is\_in\_group("player"):\\
+\> \> \> var vector = get\_tree().get\_nodes\_in\_group("player")[0].global\_position - global\_position\\
+\> \> \> \#Gradually gain speed until the max velocity is reached\\
+\> \> \> velocity = velocity.move\_toward(vector * MAX\_SPEED, ACCELERATION * delta) \\
+\> velocity = velocity.move\_toward(Vector2.ZERO, FRICTION * delta)\\
+\> move()\\ \\
+\#Function that allows you to move\\
+func move():\\
+\> velocity = move\_and\_slide(velocity)
+\end{tabbing}
+\bigbreak
+Every time you exit a stage, a day passes .
 
 \section{GAME MECHANICS - SUMMARY \label{mechanicssumm}}
 In summary, A.D.D. exhibits many features found in other top-down 2D shooters but incorporates some that are unique to itself.
@@ -104,6 +132,7 @@ When the player is being a model citizen and not causing trouble such as attacki
 Once the world has been alerted of the player's crimes, enemies will spawn and target the player. They also have an area of detection and if the player is within this area, they will be chased down mercilessly. If they get close enough to the player, they will start attacking with whatever weapon is in their possession. If the player manages to escape from their area of detection, the cops' states will also flip between "IDLE" and "WANDER", looking for the player.
 
 \section{GAME ELEMENTS: CHARACTERS, ITEMS, OBJECTS/MECHANISMS \label{elements}}
+There are several characters: The player, classy woman, Timmy, cops with different styles and the dealer. There are interactive objects such as safes that can be stolen from and doors that can be opened. In some stages, you will be able to pick up loot such as coins and jewels which adds to the amount of money you own. As you approach them, they will gravitate towards the player. You can buy various weapons and helpful items such as heals from the dealer. There are security cameras that are on the look-out for any suspicious activity but can be destroyed stealthily by a skilled player.
 
 \section{STORY OVERVIEW \label{storyover}}
 Starting from a simple robbery of a gas station, “The Player” quickly moves up the ladder and with the right equipment, high-end banks are ripe for the picking. All of this is essential of course, as the time frame in order to pay “Starman” creeps ever closer.
