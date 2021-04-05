@@ -100,7 +100,7 @@ fun\= c roll\_state():\\
 \>	move()\\
 \end{tabbing}
 \bigbreak
-When approaching an item/person that can be interacted with, an icon will pop up, signifying that they are interactive. Can steal from people and objects such as safes. Can kill people and destroy certain objects such as security cameras. Can use melee and ranged weapons, both with their own benefits and flaws. Can cycle through weapons. Durability encourages the player to be strategic when using weapons. Shop available to buy items from and there is a load-out screen where players can equip what weapons they want. There is a map selection screen where players can choose where to go. There are collectibles in some stages that gravitate towards the player once they are close enough to it. You slow down as you gather more money, but you can throw some away.
+When approaching an item/person that can be interacted with, an icon will pop up, signifying that they are interactive. Can steal from people and objects such as safes. Can kill people and destroy certain objects such as security cameras. Can use melee and ranged weapons, both with their own benefits and flaws. Can cycle through weapons. Durability encourages the player to be strategic when using weapons. Shop available to buy items from and there is a load-out screen where players can equip what weapons they want. There is a map selection screen where players can choose where to go. There are collectibles in some stages that gravitate towards the player once they are close enough to it. You slow down as you gather more money, but you can throw some away. \label{collectMoney}
 \bigbreak
 \begin{tabbing}
 \#Acc\=elerates towards player once he enters the playerDetection area\\
@@ -117,7 +117,7 @@ func move():\\
 \> velocity = move\_and\_slide(velocity)
 \end{tabbing}
 \bigbreak
-Every time you exit a stage, a day passes by.
+Every time you exit a stage, a day passes by and the deadline approaches.
 
 \section{GAME MECHANICS - SUMMARY \label{mechanicssumm}}
 In summary, A.D.D. exhibits many features found in other top-down 2D shooters but incorporates some that are unique to itself. It was important for us to express our creativity and make the game even more enjoyable than a typical 2D top-down shooter.
@@ -125,15 +125,46 @@ In summary, A.D.D. exhibits many features found in other top-down 2D shooters bu
 \section{GAME AI \label{ai}}
 All the AI in A.D.D. can be broken down into 2 different types: Passive and Aggressive AI. This was the simplest design choice for us. 
 
-
 \subsection{PASSIVE AI \label{passAI}}
-When the player is being a model citizen and not causing trouble such as attacking or stealing, passive NPCs will randomly switch between their "IDLE" and "WANDER" states. Using a timer with intervals of several seconds, every time it counts down to zero, one of the two states will be chosen, and the timer will be reset. However, if the player is in the NPC's area of detection while committing crime, their state will flip to "PANIC", which will alert the stage that the player has been detected, which will consequently spawn in enemy cops.
-
+When the player is being a model citizen and not causing trouble such as attacking or stealing, passive NPCs will randomly switch between their "IDLE" and "WANDER" states. Using a timer with intervals of several seconds, every time it counts down to zero, one of the two states will be chosen, and the timer will be reset.
+\bigbreak
+\begin{tabbing}
+\#Creates a timer that picks a random state every couple of seconds\\
+	timer.set\_wait\_time(3.0)\\
+	timer.set\_one\_shot(false)\\
+	timer.connect("timeout", self, "update\_wander")\\
+	add\_child(timer)\\
+	timer.start()\\
+	state = pick\_random\_state([IDLE, WANDER])\\
+	\\
+	\#Set a separate panic timer but don't start it until the NPC is in the PANIC state\\
+	panicTimer.set\_wait\_time(0.5)\\
+	panicTimer.set\_one\_shot(false)\\
+	panicTimer.connect("timeout", self, "update\_target\_position")\\
+	add\_child(panicTimer)
+\end{tabbing}
+\bigbreak
+However, if the player is in the NPC's area of detection while committing crime, their state will flip to "PANIC", which will alert the stage that the player has been detected, which will consequently spawn in enemy cops.
+\bigbreak
+\begin{tabbing}
+\#If the player can be detected,\\
+if playerDetectionZone.can\_see\_player():\\
+	\hspace{.4cm}\#If the player is in either state 2(ATTACK) or 3(CRIME), set the state to panic\\
+	\hspace{.4cm}if str(playerDetectionZone.player.get\_state()) == "2" or Global.player\_committing\_crime == true:\\
+		\hspace{.8cm}\#If the NPC is not already panicking\\
+		\hspace{.8cm}if state != PANIC:\\
+			\hspace{1.2cm}\#Stop the idle and walk timer\\
+			\hspace{1.2cm}timer.disconnect("timeout", self, "update\_wander")\\
+			\hspace{1.2cm}\#Start the panic timer and set the state to PANIC\\
+			\hspace{1.2cm}panicTimer.start()\\
+			\hspace{1.2cm}state = PANIC
+\end{tabbing}
+\bigbreak
 \subsection{AGGRESSIVE AI \label{aggAI}}
 Once the world has been alerted of the player's crimes, enemies will spawn and target the player. They also have an area of detection and if the player is within this area, they will be chased down mercilessly. If they get close enough to the player, they will start attacking with whatever weapon is in their possession. If the player manages to escape from their area of detection, the cops' states will also flip between "IDLE" and "WANDER", looking for the player.
 
 \section{GAME ELEMENTS: CHARACTERS, ITEMS, OBJECTS/MECHANISMS \label{elements}}
-There are several characters: The player, classy woman, Timmy, cops with different styles and the dealer. There are interactive objects such as safes that can be stolen from and doors that can be opened. In some stages, you will be able to pick up loot such as coins and jewels which adds to the amount of money you own. As you approach them, they will gravitate towards the player. You can buy various weapons and helpful items such as heals from the dealer. There are security cameras that are on the look-out for any suspicious activity but can be destroyed stealthily by a skilled player.
+There are several characters: The player, classy woman, Timmy, cops with different styles and the dealer. There are interactive objects such as safes that can be stolen from and doors that can be opened. In some stages, you will be able to pick up loot such as coins and jewels which adds to the amount of money you own. As you approach them, they will gravitate towards the player [\ref{collectMoney}]. You can buy various weapons and helpful items such as heals from the dealer. There are security cameras that are on the look-out for any suspicious activity but can be destroyed stealthily by a skilled player.
 
 \section{STORY OVERVIEW \label{storyover}}
 Starting from a simple robbery of a gas station convenience store, “The Player” quickly moves up the ladder and with the right equipment, high-end banks are ripe for the picking. All of this is essential of course, as the time frame in-order-to pay “Starman” creeps ever closer. 
